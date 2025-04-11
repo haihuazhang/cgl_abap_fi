@@ -1,0 +1,7 @@
+@EndUserText.label: 'Master of lucanet TaxCode'
+define service ZAPI_SF006 {
+  expose I_TaxCode;
+  expose I_TaxCodeText;
+  expose I_WithholdingTaxCode;
+  expose I_FinancialInstrTransTypeText;
+}

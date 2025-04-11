@@ -1,0 +1,29 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Exchange rate for all banks periodically",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZZ_JCE_EXRATE_GENERIC"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_JOB",
+        "value": ""
+      },
+      {
+        "name": "P_RTYPE",
+        "value": ""
+      }
+    ],
+    "valueRangesParameters": [
+      {
+        "name": "S_CURR",
+        "valueRanges": []
+      }
+    ]
+  }
+}

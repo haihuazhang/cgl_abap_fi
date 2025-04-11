@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TFI006'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TFI006'
+  }
+}
+define service ZUI_TFI006_O4 provider contracts odata_v4_ui {
+  expose ZC_TFI006;
+}

@@ -1,0 +1,96 @@
+@Metadata.layer: #CORE
+@UI.presentationVariant: [{
+    visualizations: [{type: #AS_LINEITEM}],
+    requestAtLeast: [ 'FiscalYear','Lender','Borrower' ]
+}]
+annotate entity ZR_SFI030 with
+{
+
+  //    UUID;
+  //    UUIDInterest;
+  @UI.lineItem: [{
+  position: 10
+  }]
+  @UI.selectionField: [ {
+position: 30
+} ]
+  ContractType;
+  @UI.lineItem: [{
+  position: 20
+  }]
+  @UI.selectionField: [ {
+position: 40
+} ]
+  ContractCode;
+  @UI.lineItem: [{
+  position: 30
+  }]
+  ContractName;
+  @UI.lineItem: [{
+  position: 40
+  }]
+  @UI.selectionField: [ {
+position: 50
+} ]
+  LenderCompany;
+  @UI.lineItem: [{
+  position: 50
+  }]
+  @UI.selectionField: [ {
+position: 60
+} ]
+  BorrowerCompany;
+  @UI.lineItem: [{
+  position: 60
+  }]
+  StartDate;
+  @UI.lineItem: [{
+  position: 70
+  }]
+  LoanMaturityDate;
+  @UI.lineItem: [{
+  position: 80
+  }]
+  InitialPrincipal;
+
+  //    FiscalYear;
+  @UI.lineItem: [{
+      position: 90
+     }]
+  RepaymentType1;
+  @UI.lineItem: [{
+  position: 100
+  }]
+  @UI.selectionField: [ {
+position: 20
+} ]
+  RepaymentDate;
+  @UI.lineItem: [{
+  position: 110
+  }]
+  @UI.selectionField: [ {
+position: 10
+} ]
+  RepaymentAmount;
+  //    Currency;
+  @UI.lineItem: [{
+  position: 120
+  }]
+  RepaymentNumber;
+  @UI.lineItem: [{
+  position: 130
+  }]
+  JournalEntryLender;
+  @UI.lineItem: [{
+  position: 140
+  }]
+  JournalEntryBorrower;
+  @UI.lineItem: [{
+  position: 150
+  }]
+  Notes;
+  
+  //    Lender;
+  //    Borrower;
+
+}

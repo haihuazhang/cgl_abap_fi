@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Reconciliation Statement-Line Items in G/L",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "reconciliationstatementsdetail"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_A76E444EBF35671CD855C15A3352AF7913D62671_TM",
+    "semanticObject": "ReconciliationStatementsNew",
+    "action": "Display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_A76E444EBF35671CD855C15A3352AF7913D62671_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Reconciliation Statement-Line Items in G/L"
+      }
+    }
+  ]
+}

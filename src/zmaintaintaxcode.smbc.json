@@ -1,0 +1,40 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain   Maintain Tax Code",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_MAINTAINTAXCODE_O4",
+    "serviceName": "ZUI_MAINTAINTAXCODE_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "MaintainTaxCodeAll",
+    "name": "  Maintain Tax Code",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {},
+    "objectPages": [
+      {
+        "entitySet": "MaintainTaxCodeAll",
+        "variantManagement": "control",
+        "showTransportSelectionStrip": true
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "MaintainTaxCode",
+        "tableType": "gridTable",
+        "selectionMode": "single",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 2,
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "widthIncludingColumnHeader": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service of Supplier Master Data'
+define service ZAPI_SFI001 {
+  expose I_Supplier;
+  expose I_Customer;
+}

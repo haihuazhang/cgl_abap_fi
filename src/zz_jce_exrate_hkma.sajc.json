@@ -1,0 +1,27 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Exchange Rate for HKMA",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZZCL_FI_008"
+  },
+  "parameters": [
+    {
+      "name": "P_FRDATE",
+      "mandatory": true
+    },
+    {
+      "name": "P_TODATE"
+    },
+    {
+      "name": "S_CURR"
+    },
+    {
+      "name": "P_RTYPE",
+      "mandatory": true
+    }
+  ]
+}

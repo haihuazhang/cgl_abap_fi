@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Invoice TaxRate",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir009"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_82D9FE8A91DA76743CD736E89821A6BEFDD705FE_TM",
+    "semanticObject": "zzfir009",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_82D9FE8A91DA76743CD736E89821A6BEFDD705FE_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Invoice TaxRate"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Exchange Rage",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "subobjects": [
+    {
+      "name": "ECB",
+      "description": "ECB"
+    },
+    {
+      "name": "HKMA",
+      "description": "HKMA"
+    },
+    {
+      "name": "MNB",
+      "description": "MNB"
+    },
+    {
+      "name": "NBP",
+      "description": "NBP"
+    },
+    {
+      "name": "PBC",
+      "description": "PBC"
+    }
+  ]
+}

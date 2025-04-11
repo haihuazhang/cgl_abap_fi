@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain Email Contents",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir005"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_175D18D3684491A849F577D203F786DD3FB0A5AA_TM",
+    "semanticObject": "zzfir005",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_175D18D3684491A849F577D203F786DD3FB0A5AA_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Maintain Email Contents"
+      }
+    }
+  ]
+}

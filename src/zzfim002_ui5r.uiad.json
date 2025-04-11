@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Account Configuration",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfim002"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_26220094AFCD4999A08333D07F1E1BA9A3BA8ECB_TM",
+    "semanticObject": "zzfim002",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_26220094AFCD4999A08333D07F1E1BA9A3BA8ECB_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Account Configuration"
+      }
+    }
+  ]
+}

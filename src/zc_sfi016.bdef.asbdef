@@ -1,0 +1,13 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+
+define behavior for ZC_SFI016 //alias <alias_name>
+with control
+{
+  field ( mandatory : execute ) PostingDate;
+  mapping for zr_sfi016
+    {
+      PostingDate = PostingDate;
+    }
+}

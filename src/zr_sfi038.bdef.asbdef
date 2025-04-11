@@ -1,0 +1,91 @@
+unmanaged implementation in class zbp_r_sfi038 unique;
+strict ;
+foreign entity ZR_ZT_PRT_RECORD alias PrintRecord;
+define behavior for ZR_SFI038 //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+etag master LocalLastChangedAt
+{
+  //  create;
+  update;
+  //  delete;
+  field ( readonly )
+  CompanyCode,
+  FiscalYear,
+  AccountingDocument,
+  DocumentDate,
+  AccountingDocumentType,
+  PostingDate,
+  IncomeDescribtion,
+  TransactionCurrency,
+  TotalGrossAmount,
+  Customer,
+  TaxFulfillmentDate,
+  PaymentMethod,
+  InvoiceNumber,
+  DocumentStatus,
+  Status,
+  InvoiceNo,
+  InvoiceDate,
+  FinalRecipient,
+  OrderNumber,
+  OrderDate,
+  DueDate,
+  ConstantSymbol,
+
+//Bank Information
+  BankName,
+  HouseBank,
+  swift,
+  Iban,
+  BankKey,
+  BankKey_SK,
+  AccountId,
+  BankAccount,
+  //Buyer Information
+  CustomerCode,
+  CustomerName,
+  CustomerCountry,
+  CustomerCity,
+  CompanyCity,
+  CustomerPostalCode,
+  CustomerHouseNumber,
+  VatIdentificationNumber,
+  TaxIdentificationNumber,
+  BusinessIdentificationNumber,
+  CustomerStreetName,
+  CustomerRegion,
+  //Seller Information
+  CompanyHouseNumber,
+  CompanyName,
+  CompanyStreetName,
+  CompanyCountry,
+  BusinessIdentificationNumber1,
+//  CompanyCity,
+  TaxIdentificationNumber1,
+  CompanyPostalCode,
+  VATIdentificationNumber1;
+
+  action SendEmail parameter ZR_SFI045;
+  action Print parameter ZR_ZT_PRT_PARAM_U result [0..1] ZR_S_PRT_RESULT;
+  action Cancel;
+  //  side effects { ; }
+  //  side effects { determine action
+
+
+  mapping for ztfi008 control zzsfi002
+    {
+      CompanyCode        = companycode;
+      FiscalYear         = fiscalyear;
+      AccountingDocument = accountingdocument;
+      InvoiceNumber      = invoicenumber;
+      InvoiceInstructions = InvoiceInstructions;
+      IssuerEmail        = issueremail;
+      IssuerName         = issuername;
+      status             = status;
+      LastChangedBy      = lastchangedby;
+      LastChangedAt      = lastchangedat;
+      LocalLastChangedAt = locallastchangedat;
+    }
+}

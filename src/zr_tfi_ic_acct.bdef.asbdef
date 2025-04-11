@@ -1,0 +1,58 @@
+managed implementation in class ZBP_R_TFI_IC_ACCT unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TFI_IC_ACCT alias ZrTfiIcAcct
+persistent table ZTFI_IC_ACCT
+draft table ZTFI_IC_ACCT_D
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Item,
+   Type,
+   Sign,
+   Zoption,
+   Accountfrom;
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Item,
+   Type,
+   Sign,
+   Zoption,
+   Accountfrom;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTFI_IC_ACCT
+  {
+    Item = item;
+    Type = type;
+    Sign = sign;
+    Zoption = zoption;
+    Accountfrom = accountfrom;
+    Accountto = accountto;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}

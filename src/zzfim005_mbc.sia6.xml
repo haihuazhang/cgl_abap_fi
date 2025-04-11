@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZZFIM005_MBC</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>Loan Platform - Company Code Status</DESCRIPTION>
+     <RESPONSIBLE>CB9980000001</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>NYS</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZZFI</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZZFIM005_MBC</APP_ID>
+    <APP_TYPE>MBC</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_TFI010_O4</REL_NAME>
+      <REL_TYPE>G4BA</REL_TYPE>
+      <APP_ID>ZZFIM005_MBC</APP_ID>
+      <SRVC_NAME>05350A702A474C1490526B4F6986C2</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <TEXT>Maintain Loan Platform - Company Code Status</TEXT>
+      <TYPE_TEXT>OData V4</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+      <STATUS>U</STATUS>
+      <TEXT>Table Access by Generic Standard Tools</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>RUx9jz8eHt+5o+UcyLngOA==</UUID>
+        <AUTH_OBJECT>S_TABU_NAM</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <TEXT>Table Access by Generic Standard Tools</TEXT>
+        <STATUS>U</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUE>Display,Change</VALUE>
+          <VALUES>
+           <item>
+            <UUID>RUx9jz8eHt+5o+UcyLogOA==</UUID>
+            <LOW_VALUE>03</LOW_VALUE>
+           </item>
+           <item>
+            <UUID>RUx9jz8eHt+5o+UcyLoAOA==</UUID>
+            <LOW_VALUE>02</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>U</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>TABLE</FIELD>
+          <VALUE>ZI_LOANPLATFORMCOMPANY</VALUE>
+          <VALUES>
+           <item>
+            <UUID>RUx9jz8eHt+5o+UcyLpAOA==</UUID>
+            <LOW_VALUE>ZI_LOANPLATFORMCOMPANY</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Table Name</TEXT>
+          <STATUS>U</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

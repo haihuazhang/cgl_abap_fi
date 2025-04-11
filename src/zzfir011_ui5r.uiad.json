@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Reconciliation Statements-IC Transaction",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "project1"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_F7CD58BE0DF1640BDD152B86661B75A66356E81E_TM",
+    "semanticObject": "zzproject",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_F7CD58BE0DF1640BDD152B86661B75A66356E81E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Reconciliation Statements-IC Transaction",
+        "subtitle": "Reconciliation Statements-IC Transaction"
+      }
+    }
+  ]
+}

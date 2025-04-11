@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TFI_IC_ITEM'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TFI_IC_ITEM'
+  }
+}
+define service ZUI_TFI_IC_ITEM_O4 provider contracts odata_v4_ui {
+  expose ZC_TFI_IC_ITEM;
+}

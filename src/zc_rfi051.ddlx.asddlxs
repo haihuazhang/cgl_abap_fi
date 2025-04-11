@@ -1,0 +1,188 @@
+@Metadata.layer: #CUSTOMER
+@UI.presentationVariant: [{
+    visualizations: [{type: #AS_LINEITEM}],
+    requestAtLeast: [ 'Type1','Type2','CompanyCode1', 'PartnerCompany1']
+}]
+annotate entity ZR_SFI051 with 
+{
+  @UI.facet: [
+  {  purpose: #STANDARD,
+  type: #LINEITEM_REFERENCE
+    }
+    ]
+  @UI.lineItem: [{
+  label: 'Company code',
+     position: 10
+   }]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode',
+    
+                                            element: 'CompanyCode' }}]                                                                                    
+  CompanyCode;
+  
+    @UI.lineItem: [{
+  label: 'Companycode  Name',
+     position: 11
+   }]
+  CompanyCodeName;
+  
+
+  @UI.lineItem: [{
+     position: 20,
+     label: 'FiscalYear'
+   }]
+//   @Consumption.filter: { selectionType:#SINGLE,multipleSelections: false,mandatory: true}                                        
+  FiscalYear;
+
+  @UI.lineItem: [{
+     position: 30,
+     label: 'FiscalPeriod'
+   }]
+// @Consumption.filter: { selectionType:#SINGLE,multipleSelections: false,mandatory: true} 
+  FiscalPeriod;
+
+  @UI.lineItem: [{
+   label: 'BP',
+     position: 40
+   }]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode',
+                                            element: 'Company' }}]                                             
+  PartnerCompany;
+  
+    @UI.lineItem: [{
+   label: 'BP Name',
+     position: 41
+   }]
+  BusinessPartnername;
+  
+
+  @UI.lineItem: [{
+  label: 'Item',
+     position: 50
+   }]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+   @Consumption.filter: { selectionType:#SINGLE,multipleSelections: false,mandatory: true} 
+  Item;
+
+  @UI.lineItem: [ {
+  label: 'Company->BP AR(TransactionCurrency)',
+  position: 60,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url1'
+  } ]  
+  TotalAmount1;
+
+   
+  @UI.lineItem: [ {
+  label: 'BP->Company AP(TransactionCurrency)',
+   position: 70,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url2'
+  } ] 
+      
+  TotalAmount2;
+  
+   @UI.lineItem: [{
+   label: 'Difference(Transaction Currency)',
+     position: 80
+   }]
+  Difference1;
+  
+     @UI.lineItem: [ {
+   label: 'Company->BP AP(TransactionCurrency)',
+   position: 90,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url3'
+  } ]  
+  TotalAmount3;
+
+  @UI.lineItem: [ {
+  label: 'BP->Company AR(TransactionCurrency)',
+   position: 100,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url4'
+  } ]   
+  TotalAmount4;
+  
+   @UI.lineItem: [{
+   label: 'Difference(Transaction Currency)',
+     position: 110
+   }]
+  Difference2;
+  
+     @UI.lineItem: [{
+   label: 'Total difference
+（Transaction Currency）',
+     position: 120
+   }]
+  TotalDifference1;
+  
+
+     @UI.lineItem: [ {
+  label: 'Company->BP  AR(Global Currency)',
+   position: 130,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url1'
+  } ]  
+  TotalAmountGlobal1;
+
+  @UI.lineItem: [ {
+  label: 'BP->Company  AP(Global Currency)',
+  position: 140,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url2'
+  } ]  
+  TotalAmountGlobal2;
+  
+   @UI.lineItem: [{
+   label: 'Difference(Global Currency)',
+     position: 150
+   }]
+  Difference3;
+  
+       @UI.lineItem: [ {
+  label: 'Company->BP  AP(Global Currency)',
+   position: 160,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url3'
+  } ] 
+  TotalAmountGlobal3;
+
+       @UI.lineItem: [ {
+    label: 'BP->Company  AR(Global Currency)',
+     position: 170,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url4'
+  } ]    
+  TotalAmountGlobal4;
+  
+   @UI.lineItem: [{
+   label: 'Difference(Global Currency)',
+     position: 180
+   }]
+  Difference4;
+  
+     @UI.lineItem: [{
+   label: 'Total difference(Global Currency)',
+     position: 190
+   }]
+  TotalDifference2;
+
+
+
+}

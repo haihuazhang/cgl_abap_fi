@@ -1,0 +1,5 @@
+@EndUserText.label: 'CGL Group Intro-co Loan Summary'
+define service ZUI_TFI005_O4 {
+  expose ZR_SFI017;
+  expose ZR_SFI023;
+}

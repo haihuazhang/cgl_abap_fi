@@ -1,0 +1,152 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZR_SFI029 with
+//  parameters
+//    @Consumption.defaultValue: ''
+//    P_Date
+
+{
+  @UI.hidden: true
+  UUID;
+  @UI.selectionField: [ {
+  position: 10
+  } ]
+  @UI.lineItem: [{
+    position: 10
+   }]
+  ContractType;
+  @UI.selectionField: [ {
+  position: 20
+  } ]
+  @UI.lineItem: [{
+  position: 20
+  }]
+  ContractCode;
+  @UI.lineItem: [{
+  position: 30
+  }]
+  ContractName;
+  @UI.selectionField: [ {
+  position: 30
+  } ]
+  @UI.lineItem: [{
+  position: 40
+  }]
+  Lender;
+  @UI.selectionField: [ {
+  position: 40
+  } ]
+  @UI.lineItem: [{
+  position: 50
+  }]
+  Borrower;
+  @UI.lineItem: [{
+  position: 60
+  }]
+  StartDate;
+  @UI.lineItem: [{
+  position: 70,
+  label: 'Loan Maturity Date'
+  }]
+  LoanMaturityDate;
+  @UI.lineItem: [{
+  position: 80,
+  label: 'Initial Principal'
+  }]
+  InitialPrincipal;
+  //  Currency;
+  @UI.lineItem: [{
+    position: 90
+   }]
+  ExchangeRate;
+  @UI.lineItem: [{
+  position: 100
+  }]
+  ExRates;
+  @UI.lineItem: [{
+  position: 110,
+  label: 'Other Expenses'
+  }]
+  OtherExpenses;
+  @UI.lineItem: [{
+  position: 120
+  }]
+  HouseBankLender;
+  @UI.lineItem: [{
+  position: 130
+  }]
+  AccountIDLender;
+  @UI.lineItem: [{
+  position: 140
+  }]
+  HouseBankBorrower;
+  @UI.lineItem: [{
+  position: 150
+  }]
+  AccountIDBorrower;
+  @UI.lineItem: [{
+  position: 160,
+  label: 'Cash Flow(Lender)'
+  }]
+  CashFlowLender;
+  @UI.lineItem: [{
+  position: 161,
+  label: 'Cash Flow(Borrower)'
+  }]
+  CashFlowBorrower;
+  //  CurrencyEUR;
+  @UI.lineItem: [{
+    position: 170,
+    label:'Initial Principal(EUR)'
+   }]
+  InitialPrincipalEUR;
+  @UI.lineItem: [{
+  position: 180
+  }]
+  PrincipalRepayment;
+  @UI.lineItem: [{
+  position: 190
+  }]
+  PrincipalBalance;
+  @UI.lineItem: [{
+  position: 200,
+  label:'Principal Balance(EUR)'
+  }]
+  PrincipalBalanceEUR;
+  @UI.lineItem: [{
+  position: 210
+  }]
+  AccumulatedInterest;
+  @UI.lineItem: [{
+  position: 220
+  }]
+  InterestRepayment;
+  @UI.lineItem: [{
+  position: 230
+  }]
+  InterestBalance;
+  @UI.lineItem: [{
+  position: 240,
+  label:'Interest Balance(EUR)'
+  }]
+  InterestBalanceEUR;
+  @UI.lineItem: [{
+  position: 250,
+  label: 'Monthly Interest Accrual'
+  }]
+  MonthlyInterestAccrual;
+  @UI.hidden: true
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+  @UI.hidden: true
+  LastChangedBy;
+  @UI.hidden: true
+  LastChangedAt;
+  @UI.hidden: true
+  LocalLastChangedAt;
+  /* Associations */
+  //  _Borrower;
+  //  _ContractType;
+  //  _Lender;
+
+}

@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_TFI006 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TFI006 alias ZrTfi006
+persistent table ZTFI006
+draft table ZTFI006_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( readonly )
+   Uuid,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( numbering : managed )
+   Uuid;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTFI006
+  {
+    Uuid = uuid;
+    Glaccount = glaccount;
+    Incometype = incometype;
+    Incomedescribtion = incomedescribtion;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

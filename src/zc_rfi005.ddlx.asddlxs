@@ -1,0 +1,65 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZR_SFI017 with
+{
+  @UI.facet: [
+  {
+    label: 'List',
+    id: 'Items',
+    purpose: #STANDARD,
+    position: 20,
+    type: #LINEITEM_REFERENCE,
+    targetElement: '_Item'
+  //    targetQualifier: 'A'
+  }
+  ]
+  @UI.selectionField: [ { position: 10 } ]
+
+  @UI.lineItem: [{
+     position: 10
+   }]
+  @Consumption.filter: { selectionType:#SINGLE,multipleSelections: false,mandatory: true}
+  ReportingDate;
+  @Consumption.valueHelpDefinition: [{  entity: {   name: 'I_CompanyCode' ,
+                                            element: 'CompanyCode'  }
+                                            //联动
+                                            //,
+                                           // additionalBinding: [{
+                                            //   element: 'CurrencyISOCode',
+                                            //   localElement: 'Num',
+                                            //   usage: #FILTER_AND_RESULT
+                                           //  }]
+
+                                             }]
+  @UI.selectionField: [ { position: 20 } ]
+  @UI.lineItem: [{
+     position: 20
+   }]
+  CompanyCode;
+
+  @UI.lineItem: [{
+     position: 30
+   }]
+  @UI.hidden: true
+  Currency;
+
+  @UI.lineItem: [{
+     position: 40
+   }]
+  PrincipalLender;
+
+  @UI.lineItem: [{
+     position: 50
+   }]
+  InterestLender;
+
+  @UI.lineItem: [{
+     position: 60
+   }]
+  PrincipalBorrower;
+
+  @UI.lineItem: [{
+     position: 70
+   }]
+  InterestBorrower;
+
+}

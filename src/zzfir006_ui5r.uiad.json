@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "CGL Group Intro-Co Loan List",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir006"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_66535B3663277391DCE8C5CCD87CC33E547126E1_TM",
+    "semanticObject": "zzfir006",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_66535B3663277391DCE8C5CCD87CC33E547126E1_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "CGL Group Intro-Co Loan List"
+      }
+    }
+  ]
+}

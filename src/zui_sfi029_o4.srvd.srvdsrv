@@ -1,0 +1,4 @@
+@EndUserText.label: 'Analytical Report for Loan Platform - By Date'
+define service ZUI_SFI029_O4 {
+  expose ZR_SFI029;
+}

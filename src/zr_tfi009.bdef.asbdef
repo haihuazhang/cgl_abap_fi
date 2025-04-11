@@ -1,0 +1,46 @@
+managed implementation in class ZBP_R_TFI009 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TFI009 alias ZrTfi009
+persistent table ZTFI009
+draft table ZTFI009_D
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( readonly )
+   Uuid,
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( numbering : managed )
+   Uuid;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTFI009
+  {
+    Uuid = uuid;
+    Emailtype = emailtype;
+    Emailsubject = emailsubject;
+    Emailcontent = emailcontent;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}

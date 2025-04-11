@@ -1,0 +1,6 @@
+@EndUserText.label: 'Invoice'
+define service ZUI_SFI038_O4 {
+  expose ZC_SFI038;
+  expose ZR_SFI044;
+  expose ZC_ZT_PRT_QUEUES;
+}

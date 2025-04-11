@@ -1,0 +1,27 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Exchange Rate for ECB",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZZCL_FI_005"
+  },
+  "parameters": [
+    {
+      "name": "P_FRDATE",
+      "mandatory": true
+    },
+    {
+      "name": "P_TODATE"
+    },
+    {
+      "name": "S_CURR"
+    },
+    {
+      "name": "P_RTYPE",
+      "mandatory": true
+    }
+  ]
+}

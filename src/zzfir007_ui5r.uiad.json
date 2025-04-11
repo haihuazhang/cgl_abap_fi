@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Internal reconciliation Account configuration",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir007"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_051CE43CC8A2C49782711A82E74F871FC4E1F04C_TM",
+    "semanticObject": "zzfir007",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_051CE43CC8A2C49782711A82E74F871FC4E1F04C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Internal reconciliation Account configuration"
+      }
+    }
+  ]
+}

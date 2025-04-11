@@ -1,0 +1,71 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Fixed Asset Time Dependent Data'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+define view entity ZR_SFI058
+  as select from I_FixedAssetAssgmt
+{
+  key CompanyCode,
+  key MasterFixedAsset,
+  key FixedAsset,
+  key ValidityEndDate,
+      ControllingArea,
+      ValidityStartDate,
+      VehicleLicensePlateNumber,
+      CostCenter,
+      Plant,
+      BusinessArea,
+      AssetLocation,
+      Room,
+      CostCtrActivityType,
+      InternalOrder,
+      IsShutDown,
+      ResponsibleCostCenter,
+      PersonnelNumber,
+      MaintenanceOrder,
+      TaxJurisdiction,
+      Fund,
+      WBSElementInternalID_2,
+      //    WBSElementInternalID,
+      REInternalFinNumber,
+      //    RealEstateObject,
+      ProfitCenter,
+      Segment,
+      FunctionalArea,
+      ShiftOperationFactor,
+      GrantID,
+      BudgetPeriod,
+      FundsCenter,
+      //    FunctionalLocation,
+      BusinessPlace,
+      AssetAuthorizationContext,
+      ReferenceDocumentType,
+      LogicalSystem,
+      ReferenceDocumentContext,
+      ReferenceDocument,
+      /* Associations */
+      _AssetLocation,
+      _BusinessArea,
+      _CompanyCode,
+      _ControllingArea,
+      _CostCenter,
+      _CostCenterActivityType,
+      _Employment,
+      _FixedAsset,
+      _FunctionalArea,
+      //      _FunctionalLocation,
+      _InternalOrder,
+      _MaintenanceOrder,
+      _MasterFixedAsset,
+      _Plant,
+      _ProfitCenter,
+      _RealEstateObject,
+      _ResponsibleCostCenter,
+      _Segment,
+      _WBSElement
+}

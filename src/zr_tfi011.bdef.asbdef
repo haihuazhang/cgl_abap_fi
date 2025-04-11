@@ -1,0 +1,49 @@
+managed implementation in class ZBP_R_TFI011 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TFI011 alias ZrTfi011
+persistent table ZTFI011
+draft table ZTFI011_D
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Taxcode,
+   Taxcounrty;
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Taxcode,
+   Taxcounrty;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTFI011
+  {
+    Taxcode = taxcode;
+    Taxcounrty = taxcounrty;
+    Taxrate = taxrate;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}

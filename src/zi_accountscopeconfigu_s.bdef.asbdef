@@ -1,0 +1,104 @@
+managed with additional save implementation in class ZBP_I_ACCOUNTSCOPECONFIGU_S unique;
+strict;
+with draft;
+define behavior for ZI_AccountScopeConfigu_S alias AccountScopeConfAll
+draft table ZTFI_IC_ACC_D_S
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( features : instance )
+   TransportRequestID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit with additional implementation;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+  action ( features : instance ) SelectCustomizingTransptReq parameter D_SelectCustomizingTransptReqP result [1] $self;
+
+  association _AccountScopeConfigu { create ( features : instance ); with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; }
+
+  side effects {
+    action SelectCustomizingTransptReq affects $self;
+  }
+  }
+
+define behavior for ZI_AccountScopeConfigu alias AccountScopeConfigu ##UNMAPPED_FIELD
+persistent table ZTFI_IC_ACCT
+draft table ZTFI_IC_ACCT_D1
+etag master Locallastchangedat
+lock dependent by _AccountScopeConfAll
+authorization dependent by _AccountScopeConfAll
+
+{
+  field ( mandatory : create )
+   Item,
+   Type,
+   Sign,
+   Zoption,
+   Accountfrom;
+
+  field ( readonly )
+   SingletonID,
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Item,
+   Type,
+   Sign,
+   Zoption,
+   Accountfrom;
+
+  field ( notrigger )
+   SingletonID,
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+
+  update( features : global );
+  delete( features : global );
+
+  factory action ( features : instance ) CopyAccountScopeConfigu parameter ZD_CopyAccountScopeConfiguP [1];
+
+  mapping for ZTFI_IC_ACCT
+  {
+    Item = ITEM;
+    Type = TYPE;
+    Sign = SIGN;
+    Zoption = ZOPTION;
+    Accountfrom = ACCOUNTFROM;
+    Accountto = ACCOUNTTO;
+    Createdby = CREATEDBY;
+    Createdat = CREATEDAT;
+    Lastchangedby = LASTCHANGEDBY;
+    Lastchangedat = LASTCHANGEDAT;
+    Locallastchangedat = LOCALLASTCHANGEDAT;
+  }
+
+  association _AccountScopeConfAll { with draft; }
+
+  validation ValidateTransportRequest on save ##NOT_ASSIGNED_TO_DETACT { create; update; delete; }
+}

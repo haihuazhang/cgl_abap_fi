@@ -1,0 +1,54 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Analytics Cube 2 of Loan Platform - By Date",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "ZR_SFI029_AV",
+    "icfPath": "/sap/bc/ui5_ui5/sap/nw_aps_ana_mda"
+  },
+  "navigation": {
+    "targetMappingId": "ZR_SFI029_AD_TM",
+    "semanticObject": "ZR_SFI029_AD",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "parameters": [
+      {
+        "name": "query",
+        "filterValue": "ZR_SFI029_Qry"
+      },
+      {
+        "name": "queryType",
+        "filterValue": "CDSProjectionView"
+      }
+    ],
+    "additionalParameterHandling": "ignored"
+  },
+  "tiles": [
+    {
+      "id": "ZR_SFI029_AD",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Analytics Cube 2 of Loan Platform - By Date",
+        "tileNavigationParameters": [
+          {
+            "name": "query",
+            "value": "ZR_SFI029_Qry"
+          },
+          {
+            "name": "queryType",
+            "value": "CDSProjectionView"
+          }
+        ]
+      }
+    }
+  ]
+}

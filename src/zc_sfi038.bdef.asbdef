@@ -1,0 +1,12 @@
+projection;
+//strict ( 2 );
+strict;
+
+define behavior for ZC_SFI038 //alias <alias_name>
+{
+  use update;
+
+  use action Print ;
+  use action SendEmail;
+  use action Cancel;
+}

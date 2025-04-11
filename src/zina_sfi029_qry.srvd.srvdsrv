@@ -1,0 +1,6 @@
+@EndUserText: {
+  label: 'Service Definition for ZR_SFI029_QRY'
+}
+define service ZINA_SFI029_QRY provider contracts ina {
+  expose ZR_SFI029_QRY;
+}

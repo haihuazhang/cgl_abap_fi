@@ -1,0 +1,17 @@
+projection implementation in class ZBP_C_TFI011 unique;
+strict ( 2 );
+use draft;
+define behavior for ZC_TFI011 alias ZcTfi011
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+}

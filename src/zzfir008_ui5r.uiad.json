@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Internal reconciliation Item classification",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir008"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_BAF4944141601E97EEAA5781C14550E0E2ECDA73_TM",
+    "semanticObject": "zzfir008",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_BAF4944141601E97EEAA5781C14550E0E2ECDA73_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Internal reconciliation Item classification"
+      }
+    }
+  ]
+}

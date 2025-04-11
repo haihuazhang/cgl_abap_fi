@@ -1,0 +1,10 @@
+@EndUserText.label: 'Company  Code  check'
+@MappingRole: true
+define role ZR_SFI055 {
+    grant
+        select
+            on
+                ZR_SFI055
+                    where
+                        (CompanyCode ) = aspect pfcg_auth( F_BKPF_BUK, BUKRS  , ACTVT = '03' );
+}

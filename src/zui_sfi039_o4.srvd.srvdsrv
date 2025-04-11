@@ -1,0 +1,8 @@
+@EndUserText.label: 'CGL Invoice Print'
+define service ZUI_SFI039_O4 {
+  expose ZR_SFI039;
+  expose ZR_SFI040;
+  expose ZR_SFI041;
+  expose ZR_SFI042;
+  expose ZR_SFI043;
+}

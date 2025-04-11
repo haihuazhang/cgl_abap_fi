@@ -1,0 +1,110 @@
+@Metadata.layer: #CUSTOMER
+@UI: { 
+  headerInfo:{ 
+    typeName:'CGL Group Intro-co Loan List'
+    //typeNamePlural:'Configurations'
+  }
+}
+annotate entity ZR_SFI024
+    with 
+{
+  
+  @UI.facet: [
+  { 
+    label: 'List',
+    id: 'Items',
+    purpose: #STANDARD,
+    position: 20,
+    type: #LINEITEM_REFERENCE
+    //targetElement: '_items'
+//    targetQualifier: 'A'
+  }
+  ]
+
+  @UI.selectionField:[ { position: 10 } ]
+  @UI.lineItem: [{
+     position: 10
+   }]
+  @Consumption.filter: { selectionType:#SINGLE,multipleSelections: false,mandatory: true}
+    REPORTDATE;
+
+ //@UI.selectionField:[ { position: 20 } ]
+  @UI.lineItem: [{
+     position: 20
+  } ]
+    CompanyCode;
+      @UI.lineItem: [{
+     position: 30
+  } ]
+    CompanyName;
+   //@UI.selectionField:[ { position: 30 } ]
+    @UI.lineItem: [{
+     position: 40
+   }]   
+    Counterparty;
+   @UI.lineItem: [{
+     position: 50
+   }]   
+    CounterpartyName;
+  @UI.lineItem: [{
+     position: 60
+   }]
+      @UI.hidden: true
+    CurrencyEUR;
+      @UI.lineItem: [{
+     position: 70
+   }]
+    PrincipalBalanceEUR_lender;
+      @UI.lineItem: [{
+     position: 80
+   }]
+    InterestBalanceEUR_lender;
+  @UI.lineItem: [{
+     position: 90
+   }]
+    PrincipalBalanceEUR_borrower;
+  @UI.lineItem: [{
+     position: 100
+   }]
+    InterestBalanceEUR_borrower;
+  @UI.lineItem: [{
+     position: 110
+   }]
+    PrincipalBalanceEUR_sum;
+  @UI.lineItem: [{
+     position: 120
+   }]
+   
+    InterestBalanceEUR_sum;
+//  @UI.lineItem: [{
+//     position: 110,
+//     label: 'Show details',
+//     type: #WITH_INTENT_BASED_NAVIGATION,
+//  semanticObject: 'zzfir003',
+//  semanticObjectAction: 'display',
+//  semanticObjectBinding: [
+//  { 
+//    element: 'Date',
+//    localElement: 'REPORTDATE'
+//   },
+//   {
+//    element: 'Lender',
+//    localElement: 'CompanyCode'
+//   },
+//   {
+//    element: 'Lender',
+//    localElement: 'Counterparty'
+//   },
+//   {
+//    element: 'Borrower',
+//    localElement: 'CompanyCode'
+//   },
+//   {
+//    element: 'Borrower',
+//    localElement: 'Counterparty'
+//   }
+//   ]
+//   }]
+//    Navigation;    
+    
+}

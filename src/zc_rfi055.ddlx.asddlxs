@@ -1,0 +1,230 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZR_SFI055 with 
+{
+  @UI.facet: [
+  {  purpose: #STANDARD,
+  type: #LINEITEM_REFERENCE
+    }
+    ]
+  @UI.lineItem: [{
+  label: 'Company code',
+     position: 10
+   }]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode',
+    
+                                            element: 'CompanyCode' }}]                                                                                    
+  CompanyCode;
+ 
+
+  @UI.lineItem: [{
+  label: 'Fiscal Year',
+     position: 20
+   }]
+                                      
+  FiscalYear;
+
+  @UI.lineItem: [{
+  label: 'Fiscal Period',
+     position: 30
+   }]
+
+  FiscalPeriod;
+
+  @UI.lineItem: [{
+   label: 'Partner Company',
+     position: 40
+   }]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+   @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode',
+                                            element: 'Company' }}]                                             
+  PartnerCompany;
+  
+
+  @UI.lineItem: [{
+  label: 'Item',
+     position: 50
+   }]
+     @UI.selectionField: [ {
+    position: 50
+  } ]
+
+     @Consumption.valueHelpDefinition: [{ entity: { name: 'ZR_TFI_IC_ITEM',
+                                            element: 'Item' }}]  
+  Item;
+
+  
+    @UI.lineItem: [{
+  label: 'Accounting Document Type',
+     position: 60
+   }]
+  AccountingDocumentType;
+  
+      @UI.lineItem: [{
+  label: 'Accounting Document',
+     position: 70,
+//  criticality: '',
+  type: #WITH_URL,
+  url: 'Url'
+  } ]  
+  AccountingDocument;
+  
+    @UI.lineItem: [{
+  label: 'LedgerGLLineItem',
+     position: 80
+   }]
+  LedgerGLLineItem;
+  
+ 
+  
+   @UI.lineItem: [{
+  label: 'TypeXY',
+     position: 90
+   }]
+     @UI.selectionField: [ {
+    position: 90
+  } ]
+   @EndUserText.label:'TypeXY'
+  Type;
+  
+  @UI.lineItem: [{
+  label: 'Posting Date',
+     position: 100
+   }]
+  PostingDate ;
+  
+    @UI.lineItem: [{
+  label: 'Document Date',
+     position: 110
+   }]
+  DocumentDate ;
+
+    @UI.lineItem: [{
+  label: 'Creation Date',
+     position: 120
+   }]
+  CreationDate ;
+
+    @UI.lineItem: [{
+  label: 'Customer',
+     position: 130
+   }]
+  Customer ;
+  
+  
+    @UI.lineItem: [{
+  label: 'Customer Name',
+     position: 140
+   }]
+  CustomerName ;
+  
+    @UI.lineItem: [{
+  label: 'Supplier',
+     position: 150
+   }]
+  Supplier ;
+
+    @UI.lineItem: [{
+  label: 'Supplier Name',
+     position: 160
+   }]
+  SupplierName  ;
+
+    @UI.lineItem: [{
+  label: 'GL Account',
+     position: 170
+   }]
+  GLAccount  ;
+  
+
+    @UI.lineItem: [{
+  label: 'GL Account Name',
+     position: 180
+   }]
+  GLAccountName  ;
+  
+     @UI.lineItem: [{
+  label: 'Posting Key',
+     position: 190
+   }]
+  PostingKey  ; 
+
+     @UI.lineItem: [{
+  label: 'Debit Credit Code',
+     position: 200
+   }]
+  DebitCreditCode  ; 
+
+
+     @UI.lineItem: [{
+  label: 'AmountIn Transaction Currency ',
+     position: 210
+   }]
+  AmountInTransactionCurrency   ; 
+
+     @UI.lineItem: [{
+  label: 'AmountIn Global Currency',
+     position: 220
+   }]
+  AmountInGlobalCurrency   ; 
+
+
+     @UI.lineItem: [{
+  label: 'AmountIn Company Code Currency',
+     position: 230
+   }]
+ AmountInCompanyCodeCurrency   ; 
+
+
+     @UI.lineItem: [{
+  label: 'Transaction Currency',
+     position: 240
+   }]
+ TransactionCurrency  ; 
+
+     @UI.lineItem: [{
+  label: 'Clearing Journal Entry',
+     position: 250
+   }]
+ ClearingJournalEntry  ; 
+ 
+ 
+      @UI.lineItem: [{
+  label: 'Clearing Date',
+     position: 260
+   }]
+ ClearingDate  ; 
+
+
+      @UI.lineItem: [{
+  label: 'Document Item Text',
+     position: 270
+   }]
+DocumentItemText  ; 
+
+
+      @UI.lineItem: [{
+  label: 'Assignment Reference',
+     position: 280
+   }]
+AssignmentReference  ; 
+
+
+      @UI.lineItem: [{
+  label: 'Tax Code',
+     position: 290
+   }]
+TaxCode ; 
+
+
+      @UI.lineItem: [{
+  label: 'Url',
+     position: 300
+   }]
+  Url ; 
+
+}

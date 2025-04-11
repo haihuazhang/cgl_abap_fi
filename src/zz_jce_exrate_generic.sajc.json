@@ -1,0 +1,24 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Exchange rate for all banks periodically",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "className": "ZZCL_FI_011"
+  },
+  "parameters": [
+    {
+      "name": "P_JOB",
+      "mandatory": true
+    },
+    {
+      "name": "S_CURR"
+    },
+    {
+      "name": "P_RTYPE",
+      "mandatory": true
+    }
+  ]
+}

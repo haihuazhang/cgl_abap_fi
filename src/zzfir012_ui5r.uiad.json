@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Reconciliation Statements Detail",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "project2"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DECA5ECC02D2DB31260E50151C51D1C43DE00223_TM",
+    "semanticObject": "ReconciliationStatements",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DECA5ECC02D2DB31260E50151C51D1C43DE00223_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Reconciliation Statements Detail"
+      }
+    }
+  ]
+}

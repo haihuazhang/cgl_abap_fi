@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_AccountScopeConfigu_S'
+define service ZUI_ACCOUNTSCOPECONFIGU {
+  expose ZI_ACCOUNTSCOPECONFIGU_S as AccountScopeConfAll;
+  expose ZI_ACCOUNTSCOPECONFIGU as AccountScopeConfigu;
+}

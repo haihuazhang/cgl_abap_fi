@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SIA6" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <SIA6>
+    <MAIN_OBJECT>
+     <NAME>ZZFIR010_EXT</NAME>
+     <TYPE>SIA6</TYPE>
+     <DESCRIPTION>Loan Contracts Report-Repayment</DESCRIPTION>
+     <RESPONSIBLE>CB9980000001</RESPONSIBLE>
+     <MASTER_LANGUAGE>EN</MASTER_LANGUAGE>
+     <MASTER_SYSTEM>NYS</MASTER_SYSTEM>
+     <PACKAGE_REF>
+      <PACKAGE_NAME>ZZFI</PACKAGE_NAME>
+     </PACKAGE_REF>
+     <ABAP_LANGU_VERSION>5</ABAP_LANGU_VERSION>
+    </MAIN_OBJECT>
+    <APP_ID>ZZFIR010_EXT</APP_ID>
+    <APP_TYPE>EXT</APP_TYPE>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+    <UI_APP_ID>ZZFIR010_UI5R</UI_APP_ID>
+    <SERVICE>
+     <item>
+      <REL_NAME>ZUI_SFI030_O2                      0001</REL_NAME>
+      <REL_TYPE>IWSV</REL_TYPE>
+      <APP_ID>ZZFIR010_EXT</APP_ID>
+      <SRVC_NAME>52078808416794331B96E92707357C</SRVC_NAME>
+      <SRVC_TYPE>HT</SRVC_TYPE>
+      <UIAD_SRC>ZZFIR010_UI5R</UIAD_SRC>
+      <TEXT>Service Binding</TEXT>
+      <TYPE_TEXT>OData V2</TYPE_TEXT>
+     </item>
+    </SERVICE>
+    <AUTH>
+     <item>
+      <AUTH_OBJECT>ZZAOFI002</AUTH_OBJECT>
+      <STATUS>S</STATUS>
+      <TEXT>ZZAOFI002</TEXT>
+      <AUTH_ITEM>
+       <item>
+        <UUID>rSZcyRMvHt+/4aknZ5agig==</UUID>
+        <AUTH_OBJECT>ZZAOFI002</AUTH_OBJECT>
+        <AUTH_OBJECT_INSTANCE>0001</AUTH_OBJECT_INSTANCE>
+        <IBS_SOURCE>52078808416794331B96E92707357C</IBS_SOURCE>
+        <IBS_SOURCE_TYPE>HT</IBS_SOURCE_TYPE>
+        <TEXT>ZZAOFI002</TEXT>
+        <STATUS>S</STATUS>
+        <VALUES>
+         <item>
+          <FIELD>ACTVT</FIELD>
+          <VALUE>Display</VALUE>
+          <VALUES>
+           <item>
+            <UUID>rSZcyRMvHt+/4aknZ5bAig==</UUID>
+            <LOW_VALUE>03</LOW_VALUE>
+           </item>
+          </VALUES>
+          <TEXT>Activity</TEXT>
+          <STATUS>S</STATUS>
+          <IS_ACTVT>X</IS_ACTVT>
+         </item>
+         <item>
+          <FIELD>ZZAFFI001</FIELD>
+          <VALUES>
+           <item>
+            <UUID>rSZcyRMvHt+/4aknZ5bgig==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Loan - Authorization Function Code</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+         <item>
+          <FIELD>ZZAFFI002</FIELD>
+          <VALUES>
+           <item>
+            <UUID>rSZcyRMvHt+/4aknZ5cAig==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Company</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+         <item>
+          <FIELD>ZZAFFI003</FIELD>
+          <VALUES>
+           <item>
+            <UUID>rSZcyRMvHt+/4aknZ5cgig==</UUID>
+           </item>
+          </VALUES>
+          <TEXT>Company</TEXT>
+          <STATUS>S</STATUS>
+         </item>
+        </VALUES>
+       </item>
+      </AUTH_ITEM>
+     </item>
+    </AUTH>
+    <PUBLISH_STATUS>p</PUBLISH_STATUS>
+   </SIA6>
+  </asx:values>
+ </asx:abap>
+</abapGit>

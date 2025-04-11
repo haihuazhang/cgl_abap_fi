@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZR_TFI010'
+define service ZUI_TFI010 {
+  expose ZR_TFI010 as LoanPlatformCompAll;
+  expose ZI_LOANPLATFORMCOMPANY as LoanPlatformCompany;
+}

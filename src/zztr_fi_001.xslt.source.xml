@@ -1,0 +1,55 @@
+<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:sap="http://www.sap.com/sapxsl" xmlns:gesmes="http://www.gesmes.org/xml/2002-08-01" version="1.0">
+
+  <xsl:strip-space elements="*"/>
+
+  <!--<xsl:template match="/*[local-name()='Cube']">-->
+  <xsl:template match="/gesmes:Envelope">
+    <!--<xsl:copy-of select="."/>-->
+    <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+      <asx:values>
+        <ENVELOPE>
+          <xsl:for-each select="/gesmes:Envelope">
+            <DUMMY0>
+              <SUBJECT>
+                <xsl:value-of select="gesmes:subject"/>
+              </SUBJECT>
+              <SENDER>
+                <NAME>
+                  <xsl:value-of select="gesmes:Sender/gesmes:name"/>
+                </NAME>
+              </SENDER>
+              <CUBE>
+                <xsl:for-each select="*[local-name()='Cube']">
+                  <DUMMY1>
+                    <CUBE>
+                      <xsl:for-each select="*[local-name()='Cube']">
+                        <DUMMY2>
+                          <DATE>
+                            <xsl:value-of select="@time"/>
+                          </DATE>
+                          <CUBE>
+                            <xsl:for-each select="*[local-name()='Cube']">
+                              <DUMMY3>
+                                <CURRENCY>
+                                  <xsl:value-of select="@currency"/>
+                                </CURRENCY>
+                                <RATE>
+                                  <xsl:value-of select="@rate"/>
+                                </RATE>
+                              </DUMMY3>
+                            </xsl:for-each>
+                          </CUBE>
+                        </DUMMY2>
+                      </xsl:for-each>
+                    </CUBE>
+                  </DUMMY1>
+                </xsl:for-each>
+              </CUBE>
+            </DUMMY0>
+          </xsl:for-each>
+        </ENVELOPE>
+      </asx:values>
+    </asx:abap>
+  </xsl:template>
+
+</xsl:transform>

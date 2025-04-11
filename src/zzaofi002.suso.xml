@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SUSO" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TOBJ>
+    <OBJCT>ZZAOFI002</OBJCT>
+    <FIEL1>ACTVT</FIEL1>
+    <FIEL2>ZZAFFI001</FIEL2>
+    <FIEL3>ZZAFFI002</FIEL3>
+    <FIEL4>ZZAFFI003</FIEL4>
+    <OCLSS>CPAE</OCLSS>
+   </TOBJ>
+   <TOBJ_ATTR>
+    <OBJCT>ZZAOFI002</OBJCT>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </TOBJ_ATTR>
+   <TOBJT>
+    <LANGU>E</LANGU>
+    <OBJECT>ZZAOFI002</OBJECT>
+    <TTEXT>ZZAOFI002</TTEXT>
+   </TOBJT>
+   <TACTZ>
+    <TACTZ>
+     <BROBJ>ZZAOFI002</BROBJ>
+     <ACTVT>01</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>ZZAOFI002</BROBJ>
+     <ACTVT>02</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>ZZAOFI002</BROBJ>
+     <ACTVT>03</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>ZZAOFI002</BROBJ>
+     <ACTVT>06</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>ZZAOFI002</BROBJ>
+     <ACTVT>10</ACTVT>
+    </TACTZ>
+    <TACTZ>
+     <BROBJ>ZZAOFI002</BROBJ>
+     <ACTVT>90</ACTVT>
+    </TACTZ>
+   </TACTZ>
+  </asx:values>
+ </asx:abap>
+</abapGit>

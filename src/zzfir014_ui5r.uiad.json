@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Reconciliation Statements-Internal Company Transaction",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "reconciliationstatements"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_E7BA7471B35F2583CE618795EB83A4C2CFB17C9E_TM",
+    "semanticObject": "reconciliationstatementsIC",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_E7BA7471B35F2583CE618795EB83A4C2CFB17C9E_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Reconciliation Statements-Internal Company Transaction"
+      }
+    }
+  ]
+}

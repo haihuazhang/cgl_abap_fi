@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control'
+@MappingRole: true
+define role ZC_TFI001 {
+    grant
+        select
+            on
+                ZC_TFI001
+                    where
+                        inheriting conditions from entity ZR_TFI001;
+                        
+}

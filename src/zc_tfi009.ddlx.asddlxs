@@ -1,0 +1,114 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Uuid'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Uuid'
+annotate view ZC_TFI009 with
+{
+  @EndUserText.label: 'Uuid'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Uuid;
+  
+  @EndUserText.label: 'Email Type'
+  @UI.identification: [ {
+    position: 20 
+  } ]
+  @UI.lineItem: [ {
+    position: 20 
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Emailtype;
+  
+  @EndUserText.label: 'Email Subject'
+  @UI.identification: [ {
+    position: 30 
+  } ]
+  @UI.lineItem: [ {
+    position: 30 
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Emailsubject;
+  
+  @EndUserText.label: 'Email Content'
+  @UI.identification: [ {
+    position: 40 
+  } ]
+  @UI.lineItem: [ {
+    position: 40 
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Emailcontent;
+  
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Created By'
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Created On'
+  } ]
+  Createdat;
+  
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Changed By'
+  } ]
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Changed On'
+  } ]
+  Lastchangedat;
+  
+  @UI.identification: [ {
+    position: 90 , 
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 , 
+    label: 'Changed On'
+  } ]
+  Locallastchangedat;
+}

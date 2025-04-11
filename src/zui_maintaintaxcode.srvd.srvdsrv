@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_MaintainTaxCode_S'
+define service ZUI_MAINTAINTAXCODE {
+  expose ZI_MAINTAINTAXCODE_S as MaintainTaxCodeAll;
+  expose ZI_MAINTAINTAXCODE as MaintainTaxCode;
+}

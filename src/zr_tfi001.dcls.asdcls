@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control'
+@MappingRole: true
+define role ZR_TFI001 {
+    grant 
+        select
+            on
+                ZR_TFI001
+                    where
+                        (LenderCompany, BorrowerCompany ) = aspect pfcg_auth(ZZAOFI002, ZZAFFI002 , ZZAFFI003 , ACTVT = '03');
+                        
+}

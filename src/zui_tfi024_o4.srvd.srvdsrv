@@ -1,0 +1,7 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TFI024'
+}
+define service ZUI_TFI024_O4
+  provider contracts odata_v4_ui {
+  expose ZR_SFI024;
+}

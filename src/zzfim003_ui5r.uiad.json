@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Sales Invoices",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfim003"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_D2BDE4D706BA068E6F59F14F41625A88930DBC7B_TM",
+    "semanticObject": "zzfim003",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_D2BDE4D706BA068E6F59F14F41625A88930DBC7B_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Sales Invoices"
+      }
+    }
+  ]
+}

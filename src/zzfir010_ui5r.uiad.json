@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Loan Contracts Report-Repayment",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir010"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_DF3AC9197CF5D89B9F601D0160872FF6FF8B657D_TM",
+    "semanticObject": "zzfir010",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_DF3AC9197CF5D89B9F601D0160872FF6FF8B657D_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Loan Contracts Report-Repayment"
+      }
+    }
+  ]
+}

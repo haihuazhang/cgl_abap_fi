@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Exchange Rate for PBC",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "catalogName": "ZZ_JCE_EXRATE_PBC"
+  },
+  "parameters": {
+    "singleValueParameters": [
+      {
+        "name": "P_FRDATE",
+        "value": ""
+      },
+      {
+        "name": "P_RTYPE",
+        "value": ""
+      },
+      {
+        "name": "P_TODATE",
+        "value": ""
+      }
+    ],
+    "valueRangesParameters": [
+      {
+        "name": "S_CURR",
+        "valueRanges": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZR_SFI023 with
+{
+
+  @UI.lineItem: [{
+     position: 10
+   }]
+  CompanyCode;
+
+  @UI.lineItem: [{
+     position: 20
+   }]
+  Counterparty;
+
+  @UI.lineItem: [{
+     position: 30
+   }]
+  @UI.hidden: true
+  Currency;
+
+  @UI.lineItem: [{
+     position: 40
+   }]
+  PrincipalLender;
+
+  @UI.lineItem: [{
+     position: 50
+   }]
+  InterestLender;
+
+  @UI.lineItem: [{
+     position: 60
+   }]
+  PrincipalBorrower;
+
+  @UI.lineItem: [{
+     position: 70
+   }]
+  InterestBorrower;
+
+}

@@ -1,0 +1,50 @@
+managed implementation in class ZBP_R_TFI_IC_ITEM unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TFI_IC_ITEM alias ZrTfiIcItem
+persistent table ZTFI_IC_ITEM
+draft table ZTFI_IC_ITEM_D
+etag master Locallastchangedat
+lock master total etag Lastchangedat
+authorization master( global )
+
+{
+  field ( mandatory : create )
+   Item;
+
+  field ( readonly )
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat,
+   Locallastchangedat;
+
+  field ( readonly : update )
+   Item;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTFI_IC_ITEM
+  {
+    Item = item;
+    Description = description;
+    Column1 = column1;
+    Column2 = column2;
+    Column3 = column3;
+    Column4 = column4;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+    Locallastchangedat = locallastchangedat;
+  }
+}

@@ -1,0 +1,71 @@
+@Metadata.layer: #CUSTOMER
+@UI: { 
+  headerInfo:{ 
+    typeName:'CGL Group Intro-co Loan Summary'
+    //typeNamePlural:'Configurations'
+  }
+}
+annotate entity ZR_SFI025
+    with 
+{
+  @UI.facet: [
+  { 
+    label: 'List',
+    id: 'Items',
+    purpose: #STANDARD,
+    position: 20,
+    type: #LINEITEM_REFERENCE,    
+    targetElement: '_ITEM'
+//    targetQualifier: 'A'
+  }
+  ]
+  @UI.selectionField:[ { position: 10 } ]
+  @UI.selectionField: [{element: 'REPORTDATE'}]
+  @UI.lineItem: [{
+     position: 10
+   }]
+@Consumption.filter: { selectionType:#SINGLE,multipleSelections: false,mandatory: true}
+    REPORTDATE;
+  @Consumption.valueHelpDefinition: [{ entity: { name: 'I_CompanyCode',
+                                            element: 'CompanyCode' }}]
+  //@UI.selectionField:[ { position: 20 } ]
+  @UI.lineItem: [{
+     position: 20
+   }]   
+    CompanyCode;
+    @UI.lineItem: [{
+     position: 30
+   }]   
+    CompanyName;  
+    
+  @UI.lineItem: [{
+     position: 40
+   }]
+  @UI.hidden: true
+    CurrencyEUR;
+      @UI.lineItem: [{
+     position: 50
+   }]
+    PrincipalBalanceEUR_lender;
+      @UI.lineItem: [{
+     position: 60
+   }]
+    InterestBalanceEUR_lender;
+  @UI.lineItem: [{
+     position: 70
+   }]
+    PrincipalBalanceEUR_borrower;
+  @UI.lineItem: [{
+     position: 80
+   }]
+    InterestBalanceEUR_borrower;
+  @UI.lineItem: [{
+     position: 90
+   }]
+    PrincipalBalanceEUR_sum;
+  @UI.lineItem: [{
+     position: 100
+   }]
+    InterestBalanceEUR_sum;
+    
+}

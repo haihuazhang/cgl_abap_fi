@@ -1,0 +1,44 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'LoanPlatformCompany', 
+    typeNamePlural: 'LoanPlatformCompanys', 
+    title: {
+      type: #STANDARD, 
+      label: 'Loan Platform - Company Code Status', 
+      value: 'CompanyCode'
+    }
+  }
+}
+annotate view ZI_LoanPlatformCompany with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'CopyLoanPlatformCompany', 
+    label: 'Copy Selected Entry', 
+    invocationGrouping: #CHANGE_SET
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_LoanPlatformCompany', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Loan Platform - Company Code Status', 
+    position: 1 
+  } ]
+  CompanyCode;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  @EndUserText.label: 'Can not post'
+  PostStatus;
+}

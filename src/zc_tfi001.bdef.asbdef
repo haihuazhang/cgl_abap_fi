@@ -1,0 +1,67 @@
+projection implementation in class ZBP_C_TFI001 unique;
+strict ( 2 );
+use draft;
+use side effects;
+define behavior for ZC_TFI001 alias Interest
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use action PostingOfInitialPrincipal deep parameter ZC_SFI016;
+  use action PostingOfMonthlyAccrualInt deep parameter ZC_SFI016;
+  use action CopyLoan;
+
+
+  use association _Repayment { create; with draft; }
+  use association _Accrual { create; with draft; }
+
+  use function GetDefaultsForPIP;
+  use function GetDefaultsForPMAI;
+  use function GetDefaultsForRepayment;
+  use function GetDefaultsForCreate;
+}
+
+
+define behavior for ZC_TFI002 alias Repayment
+use etag
+
+{
+  //  use create;
+  use update;
+  use delete;
+
+  use association _Interest { with draft; }
+//  use action PostingOfRepayment deep parameter ZC_SFI016;
+  use action PostingOfRepayment ;
+  //  use action Edit;
+  //  use action Activate;
+  //  use action Discard;
+  //  use action Resume;
+  //  use action Prepare;
+}
+
+
+define behavior for ZC_TFI003 alias Accrual
+use etag
+
+{
+  //  use create;
+  //  use update;
+  use delete;
+
+  use association _Interest { with draft; }
+  //  use action Edit;
+  //  use action Activate;
+  //  use action Discard;
+  //  use action Resume;
+  //  use action Prepare;
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Loan Contracts Report-Repayment'
+define service ZUI_SFI030_O2 {
+  expose ZR_SFI030;
+}

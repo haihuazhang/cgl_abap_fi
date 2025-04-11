@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZZFI</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class for FI</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>000</MSGNR>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>There are posted contracts. Please check.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Only one WBS element is allowed in one journal entry, please correct it.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>&amp;1&amp;2&amp;3&amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>The Principal Balance or Interest Balance is negative. Please check.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Excel sheet &amp;1 does not exist in the data file.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>No key found.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Invoice unknown.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Invoice no control.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>Can not download Invoice &amp;1, please confirm first.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Number range is not exit.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Email content is not exit.</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Error when getting data from Hong Kong Monetary Authority: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Error when getting data from PBC: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZZFI</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>The posting date is earlier than the contract start date</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

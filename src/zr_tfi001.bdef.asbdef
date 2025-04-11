@@ -1,0 +1,332 @@
+managed implementation in class ZBP_R_TFI001 unique;
+strict ( 2 );
+with draft;
+
+define own authorization context
+{
+  'ZZAOFI002';
+}
+
+define behavior for ZR_TFI001 alias Interest
+persistent table ztfi001
+draft table ztfi001_d
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global, instance )
+
+{
+  field ( readonly )
+  Uuid,
+  ContractCode,
+  Lender,
+  Borrower,
+  CurrencyEUR,
+  InitialPrincipalEUR,
+  PrincipalRepayment,
+  PrincipalBalance,
+  PrincipalBalanceEUR,
+  AccumulatedInterest,
+  InterestRepayment,
+  InterestBalance,
+  InterestBalanceEUR,
+  MonthlyInterestAccrual,
+  ExchangeRate,
+  CreatedBy,
+  CreatedAt,
+  LastChangedBy,
+  LastChangedAt,
+  LocalLastChangedAt;
+
+  field ( numbering : managed )
+  Uuid;
+
+  field ( mandatory )
+  ContractType,
+  //  ContractName,
+  //  LoanMaturityDate,
+  InitialPrincipal,
+  Currency
+  //  ExchangeRate,
+  //  ExRates
+  ;
+
+
+  field ( mandatory : create, readonly : update )
+  LenderCompany, BorrowerCompany, StartDate;
+
+  field ( features : instance )
+  ContractType,
+  InitialPrincipal,
+  Currency,
+  //  ExchangeRate,
+  ExRates,
+  HouseBankLender,
+  AccountIDLender,
+  HouseBankBorrower,
+  AccountIDBorrower,
+  CashFlowLender,
+  CashFlowBorrower;
+
+
+  //  ContractName,
+  //  LoanMaturityDate,
+  //  OtherExpenses;
+
+
+  create { default function GetDefaultsForCreate; }
+  update;
+  delete ( features : instance, precheck );
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare
+  {
+    validation CheckInterest;
+    validation Repayment~CheckRepayment;
+  }
+
+
+  determination DeterminationForInterest on save { create; }
+  determination DeterminationForMaturityDate on modify { field StartDate; }
+  //  determination DeterminationForExchangeRate on modify { field Currency; }
+  determination DeterminationForCompanyCode on modify { field LenderCompany; field BorrowerCompany; }
+  determination DeterminationForExRate on modify { field ContractType; }
+
+  validation CheckInterest on save { create; update; }
+
+  // 从自建表ZLoanPosting中查找Lender's Journal Entry或Borrower's Journal Entry是否有值）
+  function GetLoanPostStatus result [1] zr_sfi015;
+  function GetCurrentMonthAccrualStatus deep parameter ZR_SFI016 result [1] zr_sfi015;
+
+  action ( features : instance, authorization : instance ) PostingOfInitialPrincipal deep parameter ZR_SFI016 { default function GetDefaultsForPIP; }
+  action ( features : instance, authorization : instance ) PostingOfMonthlyAccrualInt deep parameter ZR_SFI016 { default function GetDefaultsForPMAI; }
+
+  factory action ( authorization : instance ) CopyLoan [1];
+
+  side effects
+  { action PostingOfInitialPrincipal affects entity _Accrual;
+    action PostingOfMonthlyAccrualInt affects entity _Accrual;
+    field Currency affects field ExchangeRate, field _Repayment.Currency;
+    //
+    field StartDate affects field LoanMaturityDate;
+    field ContractType affects field ExRates;
+    //    field Currency affects field ;
+  }
+
+
+  association _Repayment
+  { create { default function GetDefaultsForRepayment; } with draft; }
+    association _Accrual { create; with draft; }
+
+
+    mapping for ztfi001
+      {
+        Uuid               = uuid;
+        ContractType       = contract_type;
+        ContractCode       = contract_code;
+        ContractName       = contract_name;
+        //        Lender             = lender;
+        //        Borrower           = borrower;
+        Lender             = lender;
+        Borrower           = borrower;
+        LenderCompany      = lender_company;
+        BorrowerCompany    = borrower_company;
+        StartDate          = start_date;
+        LoanMaturityDate   = loan_maturity_date;
+        InitialPrincipal   = initial_principal;
+        Currency           = currency;
+        //        ExchangeRate       = exchange_rate;
+        ExRates            = ex_rates;
+        OtherExpenses      = other_expenses;
+        HouseBankLender    = house_bank_lender;
+        AccountIDLender    = account_id_lender;
+        HouseBankBorrower  = house_bank_borrower;
+        AccountIDBorrower  = account_id_borrower;
+        CashFlowLender     = cash_flow;
+        CashFlowBorrower   = cash_flow_borrower;
+        AdditionNote       = addition_note;
+        CreatedBy          = created_by;
+        CreatedAt          = created_at;
+        LastChangedBy      = last_changed_by;
+        LastChangedAt      = last_changed_at;
+        LocalLastChangedAt = local_last_changed_at;
+      }
+  }
+
+
+  define behavior for ZR_TFI002 alias Repayment
+  persistent table ztfi002
+  draft table ztfi002_d
+
+  etag master LocalLastChangedAt
+  //lock master total etag LastChangedAt
+  //authorization master( global )
+  lock dependent by _Interest
+  authorization dependent by _Interest
+
+  {
+    field ( readonly )
+    Uuid,
+    CreatedBy,
+    CreatedAt,
+    LastChangedBy,
+    LastChangedAt,
+    UUIDInterest,
+    FiscalYear,
+    CompanyCode,
+    JournalEntryLender,
+    JournalEntryBorrower,
+    JELenderStatusText,
+    JELenderStatusCriticality,
+    JEBorrowerStatusText,
+    JEBorrowerStatusCriticality,
+    //  Currency,
+    LocalLastChangedAt;
+
+    field ( numbering : managed )
+    Uuid;
+
+    field ( mandatory )
+    RepaymentType1,
+    RepaymentDate,
+    RepaymentAmount;
+
+    field ( features : instance )
+    Currency;
+
+
+    //  create;
+    update ( features : instance );
+    delete ( features : instance );
+
+
+    function GetRepaymentPostStatus result [1] zr_sfi015;
+    //  action ( features : instance ) PostingOfRepayment deep parameter ZR_SFI016;
+    action ( features : instance, authorization : instance ) PostingOfRepayment;
+
+
+
+    validation CheckRepayment on save { create; update; }
+
+    association _Interest { with draft; }
+
+
+    side effects
+    { action PostingOfRepayment
+      affects field JournalEntryLender,
+          field JournalEntryBorrower,
+          field JELenderStatusText,
+          field JELenderStatusCriticality,
+          field JEBorrowerStatusText,
+          field JEBorrowerStatusCriticality; }
+
+    //  draft action Activate optimized;
+    //  draft action Discard;
+    //  draft action Edit;
+    //  draft action Resume;
+    //  draft determine action Prepare;
+
+    mapping for ztfi002
+      {
+        Uuid                 = uuid;
+        UuidInterest         = uuid_interest;
+        CompanyCode          = company_code;
+        FiscalYear           = fiscal_year;
+        //      Accountingdocument   = accounting_document;
+        RepaymentType1       = repayment_type;
+        RepaymentDate        = repayment_date;
+        RepaymentAmount      = repayment_amount;
+        Currency             = currency;
+        PostingDate          = posting_date;
+        RepaymentNumber      = repayment_number;
+        HouseBankLender      = house_bank_lender;
+        AccountIDLender      = account_id_lender;
+        HouseBankBorrower    = house_bank_borrower;
+        AccountIDBorrower    = account_id_borrower;
+        CashFlowLender       = cash_flow;
+        CashFlowBorrower     = cash_flow_borrower;
+        Notes                = notes;
+        JournalEntryLender   = journal_entry_lender;
+        JournalEntryBorrower = journal_entry_borrower;
+        Lender               = lender;
+        Borrower             = borrower;
+        LenderCompany        = lender_company;
+        BorrowerCompany      = borrower_company;
+        CreatedBy            = created_by;
+        CreatedAt            = created_at;
+        LastChangedBy        = last_changed_by;
+        LastChangedAt        = last_changed_at;
+        LocalLastChangedAt   = local_last_changed_at;
+      }
+  }
+
+
+  define behavior for ZR_TFI003 alias Accrual
+  persistent table ztfi003
+  draft table ztfi003_d
+  etag master LocalLastChangedAt
+  //lock master total etag LastChangedAt
+  //authorization master( global )
+  lock dependent by _Interest
+  authorization dependent by _Interest
+
+  {
+    field ( readonly )
+    Uuid,
+    CreatedBy,
+    CreatedAt,
+    LastChangedBy,
+    LastChangedAt,
+    UUIDInterest,
+    //  Lender,
+    //  Borrower,
+    JELenderStatusText,
+    JELenderStatusCriticality,
+    JEBorrowerStatusText,
+    JEBorrowerStatusCriticality,
+    JournalEntryLender,
+    JournalEntryBorrower,
+    LocalLastChangedAt;
+
+    field ( numbering : managed )
+    Uuid;
+
+
+    //  create;
+    update;
+    delete;
+
+    //  draft action Activate optimized;
+    //  draft action Discard;
+    //  draft action Edit;
+    //  draft action Resume;
+    //  draft determine action Prepare;
+    association _Interest { with draft; }
+
+
+    mapping for ztfi003
+      {
+        Uuid                 = uuid;
+        UuidInterest         = uuid_interest;
+        CompanyCode          = company_code;
+        FiscalYear           = fiscal_year;
+        //      AccountingDocument = accounting_document;
+        Type                 = type;
+        PostingDate          = posting_date;
+        Amount               = amount;
+        Currency             = currency;
+        JournalEntryLender   = journal_entry_lender;
+        JournalEntryBorrower = journal_entry_borrower;
+        Lender               = lender;
+        Borrower             = borrower;
+        LenderCompany        = lender_company;
+        BorrowerCompany      = borrower_company;
+        CreatedBy            = created_by;
+        CreatedAt            = created_at;
+        LastChangedBy        = last_changed_by;
+        LastChangedAt        = last_changed_at;
+        LocalLastChangedAt   = local_last_changed_at;
+      }
+  }

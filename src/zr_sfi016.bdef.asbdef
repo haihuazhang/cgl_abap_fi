@@ -1,0 +1,9 @@
+abstract;
+strict ( 2 );
+with hierarchy;
+
+define behavior for ZR_SFI016 //alias <alias_name>
+with control
+{
+  field ( mandatory : execute ) PostingDate;
+}

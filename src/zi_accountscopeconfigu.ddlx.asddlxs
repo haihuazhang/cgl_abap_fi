@@ -1,0 +1,75 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'AccountScopeConfigu', 
+    typeNamePlural: 'AccountScopeConfigus', 
+    title: {
+      type: #STANDARD, 
+      label: 'Account Scope Configuration', 
+      value: 'Item'
+    }
+  }
+}
+annotate view ZI_AccountScopeConfigu with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'CopyAccountScopeConfigu', 
+    label: 'Copy Selected Entry', 
+    invocationGrouping: #CHANGE_SET
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_AccountScopeConfigu', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'Account Scope Configuration', 
+    position: 1 
+  } ]
+  Item;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Type;
+  
+  @UI.identification: [ {
+    position: 3 
+  } ]
+  @UI.lineItem: [ {
+    position: 3 
+  } ]
+  Sign;
+  
+  @UI.identification: [ {
+    position: 4 
+  } ]
+  @UI.lineItem: [ {
+    position: 4 
+  } ]
+  Zoption;
+  
+  @UI.identification: [ {
+    position: 5 
+  } ]
+  @UI.lineItem: [ {
+    position: 5 
+  } ]
+  Accountfrom;
+  
+  @UI.identification: [ {
+    position: 6 
+  } ]
+  @UI.lineItem: [ {
+    position: 6 
+  } ]
+  Accountto;
+}

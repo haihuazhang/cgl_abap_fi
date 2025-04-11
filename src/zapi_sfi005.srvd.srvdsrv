@@ -1,0 +1,5 @@
+@EndUserText.label: 'Master of lucanet JournalEntry'
+define service ZAPI_SFI005 {
+  expose ZR_SFI061 as I_JournalEntry;
+  expose ZR_SFI062 as I_JournalEntryItem;
+}

@@ -1,0 +1,138 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Item'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Item'
+annotate view ZC_TFI_IC_ITEM with
+{
+  @EndUserText.label: 'Item'
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'Item'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'Item'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  Item;
+  
+  @EndUserText.label: 'Description'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'Description'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  Description;
+  
+  @EndUserText.label: 'Column1'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'Column1'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'Column1'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+  Column1;
+  
+  @EndUserText.label: 'Column2'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'Column2'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'Column2'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  Column2;
+  
+  @EndUserText.label: 'Column3'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Column3'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Column3'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Column3;
+  
+  @EndUserText.label: 'Column4'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Column4'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Column4'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  Column4;
+  
+  @UI.identification: [ {
+    position: 70 
+  } ]
+  @UI.lineItem: [ {
+    position: 70 
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  Createdat;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  Lastchangedat;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  Locallastchangedat;
+}

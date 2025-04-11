@@ -1,0 +1,57 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZR_SFI044 with 
+{
+  @UI.lineItem: [{
+  label: 'Item',
+     position: 10
+   }]
+  AccountingDocumentItem;
+
+  @UI.lineItem: [{
+     position: 20
+   }]
+  GLAccount;
+
+  @UI.lineItem: [{
+     position: 30
+   }]
+  @UI.hidden: true
+  TransactionCurrency;
+
+  @UI.lineItem: [{
+   label: 'Unit Price',
+     position: 40
+   }]
+  UnitPrice;
+
+  @UI.lineItem: [{
+  label: 'Net Amount',
+     position: 50
+   }]
+  NetAmount;
+
+  @UI.lineItem: [{
+  label: 'Quality',
+     position: 60
+   }]
+  Quality;
+
+  @UI.lineItem: [{
+    label: 'Tax Rate',
+     position: 70
+   }]
+  TaxRate;
+  
+   @UI.lineItem: [{
+   label: 'Gross Amount',
+     position: 80
+   }]
+  GrossAmount;
+  
+  @UI.lineItem: [{
+  label: 'Tax Amount',
+     position: 90
+   }]
+  TaxAmount;
+
+}

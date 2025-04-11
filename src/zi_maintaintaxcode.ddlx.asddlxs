@@ -1,0 +1,53 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'MaintainTaxCode', 
+    typeNamePlural: 'MaintainTaxCodes', 
+    title: {
+      type: #STANDARD, 
+      label: '  Maintain Tax Code', 
+      value: 'Taxcode'
+    }
+  }
+}
+annotate view ZI_MaintainTaxCode with
+{
+  @UI.identification: [ {
+    position: 1 
+  } ]
+  @UI.lineItem: [ {
+    position: 1 
+  }, 
+  {
+    type: #FOR_ACTION, 
+    dataAction: 'CopyMaintainTaxCode', 
+    label: 'Copy Selected Entry', 
+    invocationGrouping: #CHANGE_SET
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_MaintainTaxCode', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: '  Maintain Tax Code', 
+    position: 1 
+  } ]
+  Taxcode;
+  
+  @UI.identification: [ {
+    position: 2 
+  } ]
+  @UI.lineItem: [ {
+    position: 2 
+  } ]
+  Taxcounrty;
+  
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'Taxrate'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'Taxrate'
+  } ]
+  Taxrate;
+}

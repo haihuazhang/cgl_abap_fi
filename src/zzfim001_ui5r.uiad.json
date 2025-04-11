@@ -1,0 +1,33 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Loan Platform",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfim001"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_5A438B4C4D249FC96F1AFDE58B4B40A3D1D401D0_TM",
+    "semanticObject": "zzfim001",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_5A438B4C4D249FC96F1AFDE58B4B40A3D1D401D0_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Loan Platform"
+      }
+    }
+  ]
+}

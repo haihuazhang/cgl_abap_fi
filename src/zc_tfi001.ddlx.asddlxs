@@ -1,0 +1,386 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'Uuid'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'Uuid'
+@UI.headerInfo.typeNamePlural: 'Loan Contracts'
+annotate view ZC_TFI001 with
+{
+  @EndUserText.label: 'Uuid'
+  @UI.facet: [ {
+    label: 'Loan Contract',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  },
+  {
+    label: 'Repayments',
+    id: 'Repayments',
+    purpose: #STANDARD,
+    position: 20 ,
+    type: #PRESENTATIONVARIANT_REFERENCE,
+    targetElement: '_Repayment'
+  },
+   {
+    label: 'Posting Of Pricipal/Interest Accrual',
+    id: 'InterestAccruals',
+    purpose: #STANDARD,
+    position: 30 ,
+    type: #PRESENTATIONVARIANT_REFERENCE,
+    targetElement: '_Accrual'
+  }
+   ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'UUID'
+  } ,{type: #FOR_ACTION, dataAction: 'PostingOfInitialPrincipal', label: 'Posting of Initial Principal'},
+    {type: #FOR_ACTION, dataAction: 'PostingOfMonthlyAccrualInt', label: 'Monthly accrual of interest'},
+    {type: #FOR_ACTION, dataAction: 'CopyLoan', label: 'Copy'}]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'UUID'
+  },
+  {type: #FOR_ACTION, dataAction: 'PostingOfInitialPrincipal', label: 'Posting of Initial Principal'},
+  {type: #FOR_ACTION, dataAction: 'PostingOfMonthlyAccrualInt', label: 'Monthly accrual of interest'},
+  {type: #FOR_ACTION, dataAction: 'CopyLoan', label: 'Copy'}
+  ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+  @UI.hidden: true
+  UUID;
+
+  @UI.identification: [ {
+    position: 20 ,
+    label: 'Contract Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,
+    label: 'Contract Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  ContractType;
+
+  @UI.identification: [ {
+    position: 30 ,
+    label: 'Contract Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,
+    label: 'Contract Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  ContractCode;
+
+  @UI.identification: [ {
+    position: 40 ,
+    label: 'Contract Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 ,
+    label: 'Contract Name'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  ContractName;
+
+  @UI.identification: [ {
+    position: 50 ,
+    label: 'Lender'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 ,
+    label: 'Lender'
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  LenderCompany;
+
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Borrower'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Borrower'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  BorrowerCompany;
+
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Start Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Start Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  StartDate;
+
+  @UI.identification: [ {
+    position: 80 ,
+    label: 'Loan Maturity Date'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 ,
+    label: 'Loan Maturity Date'
+  } ]
+  @UI.selectionField: [ {
+    position: 80
+  } ]
+  LoanMaturityDate;
+
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Initial Principal'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Initial Principal'
+  } ]
+
+  InitialPrincipal;
+
+  @UI.identification: [ {
+    position: 91 ,
+    label: 'Other Expenses'
+  } ]
+  @UI.lineItem: [ {
+    position: 91 ,
+    label: 'Other Expenses'
+  } ]
+
+  OtherExpenses;
+
+  @UI.identification: [ {
+    position: 100 ,
+    label: 'Exchange Rate'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 ,
+    label: 'Exchange Rate'
+  } ]
+
+  ExchangeRate;
+
+  @UI.identification: [ {
+    position: 110 ,
+    label: 'Interest Rate'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+    label: 'Interest Rate'
+  } ]
+
+  ExRates;
+  @UI.identification: [ {
+    position: 111
+  } ]
+  @UI.lineItem: [ {
+    position: 111
+  } ]
+
+  HouseBankLender;
+  @UI.identification: [ {
+  position: 112
+  } ]
+  @UI.lineItem: [ {
+    position: 112
+  } ]
+
+  AccountIDLender;
+  @UI.identification: [ {
+  position: 113
+  } ]
+  @UI.lineItem: [ {
+    position: 113
+  } ]
+
+  HouseBankBorrower;
+  @UI.identification: [ {
+  position: 114
+  } ]
+  @UI.lineItem: [ {
+    position: 114
+  } ]
+
+  AccountIDBorrower;
+  @UI.identification: [ {
+  position: 115,
+  label: 'Cash Flow(Lender)'
+  } ]
+  @UI.lineItem: [ {
+    position: 115,
+    label: 'Cash Flow(Lender)'
+  } ]
+  CashFlowLender;
+
+  @UI.identification: [ {
+  position: 116,
+  label: 'Cash Flow(Borrower)'
+  } ]
+  @UI.lineItem: [ {
+    position: 116,
+    label: 'Cash Flow(Borrower)'
+  } ]
+  CashFlowBorrower;
+
+  @UI.identification: [ {
+  position: 117,
+  label:'Initial Principal(EUR)'
+  } ]
+  @UI.lineItem: [ {
+    position: 117,
+    label:'Initial Principal(EUR)'
+  } ]
+  InitialPrincipalEUR;
+
+  @UI.identification: [ {
+  position: 118
+  } ]
+  @UI.lineItem: [ {
+    position: 118
+  } ]
+  PrincipalRepayment;
+
+  @UI.identification: [ {
+  position: 119
+  } ]
+  @UI.lineItem: [ {
+    position: 119
+  } ]
+  PrincipalBalance;
+
+  @UI.identification: [ {
+  position: 120,
+  label:'Principal Balance(EUR)'
+  } ]
+  @UI.lineItem: [ {
+    position: 120,
+    label:'Principal Balance(EUR)'
+  } ]
+  PrincipalBalanceEUR;
+
+  @UI.identification: [ {
+  position: 121
+  } ]
+  @UI.lineItem: [ {
+    position: 121
+  } ]
+  AccumulatedInterest;
+
+  @UI.identification: [ {
+  position: 122
+  } ]
+  @UI.lineItem: [ {
+    position: 122
+  } ]
+  InterestRepayment;
+
+  @UI.identification: [ {
+  position: 123
+  } ]
+  @UI.lineItem: [ {
+    position: 123
+  } ]
+  InterestBalance;
+
+  @UI.identification: [ {
+  position: 124,
+  label:'Interest Balance(EUR)'
+  } ]
+  @UI.lineItem: [ {
+    position: 124,
+    label:'Interest Balance(EUR)'
+  } ]
+  InterestBalanceEUR;
+
+  @UI.identification: [ {
+  position: 125,
+  label: 'Monthly Interest Accrual'
+  } ]
+  @UI.lineItem: [ {
+    position: 125,
+    label: 'Monthly Interest Accrual'
+  } ]
+  MonthlyInterestAccrual;
+
+
+
+
+
+
+  @UI.identification: [ {
+    position: 130 ,
+    label: 'Created By'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 ,
+    label: 'Created By'
+  } ]
+
+  CreatedBy;
+
+  @UI.identification: [ {
+    position: 140 ,
+    label: 'Created On'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 ,
+    label: 'Created On'
+  } ]
+
+  CreatedAt;
+
+  @UI.identification: [ {
+    position: 150 ,
+    label: 'Changed By'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 ,
+    label: 'Changed By'
+  } ]
+
+  LastChangedBy;
+
+  @UI.identification: [ {
+    position: 160 ,
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 ,
+    label: 'Changed On'
+  } ]
+
+  LastChangedAt;
+
+  @UI.identification: [ {
+    position: 170 ,
+    label: 'Changed On'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 ,
+    label: 'Changed On'
+  } ]
+  @UI.hidden: true
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+  position: 180 ,
+  label: 'Addition Note'
+  } ]
+  AdditionNote;
+
+}

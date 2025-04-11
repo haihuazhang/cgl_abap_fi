@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZZEFI030</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZZDFI030</DOMNAME>
+    <HEADLEN>55</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>20</SCRLEN2>
+    <SCRLEN3>40</SCRLEN3>
+    <DDTEXT>Borrower&apos;s Journal Entry</DDTEXT>
+    <REPTEXT>Borrower&apos;s Journal Entry</REPTEXT>
+    <SCRTEXT_S>Borrower&apos;s</SCRTEXT_S>
+    <SCRTEXT_M>Borrower&apos;s Journal E</SCRTEXT_M>
+    <SCRTEXT_L>Borrower&apos;s Journal Entry</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+    <ABAP_LANGUAGE_VERSION>5</ABAP_LANGUAGE_VERSION>
+   </DD04V>
+  </asx:values>
+ </asx:abap>
+</abapGit>

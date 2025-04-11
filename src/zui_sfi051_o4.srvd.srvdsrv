@@ -1,0 +1,4 @@
+@EndUserText.label: 'Reconciliation Statements'
+define service ZUI_SFI051_O4 {
+  expose ZR_SFI051;
+}

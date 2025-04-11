@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service of Asset Master Data'
+define service ZAPI_SFI002 {
+  expose ZR_SFI056                   as I_AssetValuationForLedger;
+  expose I_AssetValuationScrapAmount;
+  expose ZR_SFI057                   as I_FixedAsset;
+  expose ZR_SFI058                   as I_FixedAssetAssgmt;
+  expose I_FixedAssetForLedger;
+}

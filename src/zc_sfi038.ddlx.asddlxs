@@ -1,0 +1,540 @@
+@Metadata.layer: #CUSTOMER
+annotate entity ZC_SFI038 with
+{
+  @UI.facet: [ {
+  label: 'Invoice Head',
+  id: 'GeneralInfo',
+  purpose: #STANDARD,
+  position: 10 ,
+  type: #IDENTIFICATION_REFERENCE
+  },
+  {
+    label: 'Buyer Information',
+    id: 'BuyerInfo',
+    purpose: #STANDARD,
+    position: 20 ,
+    type: #FIELDGROUP_REFERENCE,
+    targetQualifier: 'buyer'
+  },
+  {
+    label: 'Seller Information',
+    id: 'SellerInfo',
+    purpose: #STANDARD,
+    position: 30 ,
+    type: #FIELDGROUP_REFERENCE,
+    targetQualifier: 'seller'
+  },
+  {
+    label: 'Bank Information',
+    id: 'BankInfo',
+    purpose: #STANDARD,
+    position: 40 ,
+    type: #FIELDGROUP_REFERENCE,
+    targetQualifier: 'bank'
+  },
+  {
+    label: 'Issuer',
+    id: 'Issuer',
+    purpose: #STANDARD,
+    position: 50 ,
+    type: #FIELDGROUP_REFERENCE,
+    targetQualifier: 'issuer'
+  },
+    {
+    label: 'Invoice Detail',
+    id: 'Item',
+    purpose: #STANDARD,
+    position: 60 ,
+    type: #LINEITEM_REFERENCE,
+    targetElement: '_Item'
+  }
+
+  ]
+
+
+
+//  @UI.fieldGroup: [{
+//    position: 10,
+//    label: 'Company Code',
+//    qualifier: 'buyer'
+//  }]
+//  CompanyCode;
+
+  ////  @UI.identification: [ {
+  ////  position: 10
+  ////  } ]
+  ////////////////////////////////////////////
+
+   @UI.fieldGroup: [{
+    position: 10,
+    label: 'Customer Code',
+    qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Customer Code'
+  CustomerCode;
+
+  @UI.fieldGroup: [{
+    position: 20,
+    label: 'Customer Name',
+    qualifier: 'buyer'
+  }]
+   @EndUserText.label:'Customer Name'
+  CustomerName;
+
+  @UI.fieldGroup: [{
+    position: 30,
+    label: 'Customer Country',
+    qualifier: 'buyer'
+  }]
+   @EndUserText.label:'Customer Country'
+  CustomerCountry;
+
+  @UI.fieldGroup: [{
+   position: 40,
+   label: 'Customer City',
+   qualifier: 'buyer'
+  }]
+   @EndUserText.label:'Customer City'
+  CustomerCity;
+
+  @UI.fieldGroup: [{
+   position: 50,
+   label: 'Customer Postal Code',
+   qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Customer Postal Code'
+  CustomerPostalCode;
+
+  @UI.fieldGroup: [{
+  position: 60,
+  label: 'Customer House Number',
+  qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Customer House Number'
+  CustomerHouseNumber;
+
+  @UI.fieldGroup: [{
+   position: 70,
+   label: 'Customer Street Name',
+   qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Customer Street Name'
+  CustomerStreetName;
+
+  @UI.fieldGroup: [{
+   position: 70,
+   label: 'Business Identification Number',
+   qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Business Identification Number'
+  BusinessIdentificationNumber;
+
+
+  @UI.fieldGroup: [{
+   position: 70,
+   label: 'Tax Identification Number',
+   qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Tax Identification Number'
+  TaxIdentificationNumber;
+
+  @UI.fieldGroup: [{
+   position: 70,
+   label: 'Vat Identification Number',
+   qualifier: 'buyer'
+  }]
+  @EndUserText.label:'Vat Identification Number'
+  VatIdentificationNumber;
+  /////////////////////////////////////////////////////
+  @UI.fieldGroup: [{
+    position: 20,
+    label: 'Company House Number',
+    qualifier: 'seller'
+  }]
+   @EndUserText.label:'Company House Number'
+  CompanyHouseNumber;
+
+
+  @UI.fieldGroup: [{
+    position: 30,
+    label: 'Company Name',
+    qualifier: 'seller'
+  }]
+     @EndUserText.label:'Company Name'
+  CompanyName;
+
+  @UI.fieldGroup: [{
+     position: 40,
+     label: 'Company Street Name',
+     qualifier: 'seller'
+   }]
+  @EndUserText.label:'Company Street Name'
+  CompanyStreetName;
+
+  @UI.fieldGroup: [{
+     position: 50,
+     label: 'Company Country',
+     qualifier: 'seller'
+   }]
+   @EndUserText.label:'Company Country'
+  CompanyCountry;
+
+  @UI.fieldGroup: [{
+     position: 60,
+     label: 'Business Identification Number',
+     qualifier: 'seller'
+   }]
+   @EndUserText.label:'Business Identification Number'
+  BusinessIdentificationNumber1;
+
+  @UI.fieldGroup: [{
+     position: 70,
+     label: 'Company City',
+     qualifier: 'seller'
+   }]
+   @EndUserText.label:'Company City'
+  CompanyCity;
+
+  @UI.fieldGroup: [{
+    position: 80,
+    label: 'Tax Identification Number',
+    qualifier: 'seller'
+  }]
+  @EndUserText.label:'Tax Identification Number'
+  TaxIdentificationNumber1;
+
+  @UI.fieldGroup: [{
+    position: 90,
+    label: 'Company PostalCode',
+    qualifier: 'seller'
+  }]
+  @EndUserText.label:'Company PostalCode'
+  CompanyPostalCode;
+
+  @UI.fieldGroup: [{
+    position: 100,
+    label: 'VAT Identification Number',
+    qualifier: 'seller'
+  }]
+  @EndUserText.label:'VAT Identification Number'
+  VATIdentificationNumber1;
+
+
+
+
+
+
+  @UI.identification: [ {
+  position: 20
+  }
+  ,{type: #FOR_ACTION, dataAction: 'SendEmail', label: 'Send to Customer'}
+  ]
+  @UI.lineItem: [ {
+    position: 20
+  }
+  ,{type: #FOR_ACTION, dataAction: 'SendEmail', label: 'Send to Customer'} 
+  ,{type: #FOR_ACTION, dataAction: 'Cancel', label: 'Cancel'}
+  ]
+  
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+
+  FiscalYear;
+  @UI.identification: [ {
+  position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  
+   @UI.lineItem: [ {
+  type: #WITH_INTENT_BASED_NAVIGATION,
+  semanticObject: 'AccountingDocument',
+  semanticObjectAction: 'manageV2',
+  semanticObjectBinding: [{
+    element: 'AccountingDocument',
+    localElement: 'AccountingDocument'
+   },
+   {
+    element: 'FiscalYear',
+    localElement: 'FiscalYear'
+   },
+   {
+    element:'CompanyCode',
+    localElement: 'CompanyCode'
+   }
+   ]
+  } ] 
+  
+  
+  AccountingDocument;
+  
+      @UI.identification: [ {
+  position: 31,
+    label: 'Company Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 31,
+    label: 'Company Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 31
+  } ]
+  
+  CompanyCode;
+
+  @UI.identification: [ {
+  position: 40,
+    label: 'Income Describtion'
+  } ]
+  @UI.lineItem: [ {
+    position: 40,
+    label: 'Income Describtion'
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  @EndUserText.label:'Income Describtion'
+  @UI.hidden: true
+  IncomeDescribtion;
+  
+
+
+  @UI.identification: [ {
+  position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  @EndUserText.label:'Posting Date'
+  PostingDate;
+
+
+  @UI.identification: [ {
+  position: 60,
+  label: 'Customer'
+  } ]
+  @UI.lineItem: [ {
+    position: 60,
+  label: 'Customer'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+    @EndUserText.label:'Customer'
+  Customer;
+
+
+  @UI.identification: [ {
+  position: 70,
+  label: 'Total Gross Amount'
+  } ]
+  @UI.lineItem: [ {
+    position: 70,
+  label: 'Total Gross Amount'
+  } ]
+   @EndUserText.label:'Total Gross Amount'
+  TotalGrossAmount;
+
+
+ // @UI.identification: [ {
+ // position: 80,
+ // label: 'Invoice No.'
+ // } ]
+ // @EndUserText.label:'Invoice No.'
+ // InvoiceNo;
+
+
+  //Invoice Head
+  @UI.identification: [ {
+    position: 90,
+    label: 'Invoice Date'
+  } ]
+  @EndUserText.label:'Invoice Date'
+  InvoiceDate;
+
+  @UI.identification: [ {
+    position: 100,
+    label: 'Order Number'
+  }]
+  @EndUserText.label:'Order Number'
+  OrderNumber;
+
+  @UI.identification: [ {
+   position: 110,
+   label: 'Order Date'
+  }]
+  @EndUserText.label:'Order Date'
+  OrderDate;
+
+
+  @UI.identification: [ {
+     position: 120,
+     label: 'Due Date'
+   }]
+   @EndUserText.label:'Due Date'
+  DueDate;
+
+  @UI.identification: [ {
+     position: 130,
+     label: 'Fufillment Date'
+   }]
+   @EndUserText.label:'Fufillment Date'
+  TaxFulfillmentDate;
+
+
+  @UI.identification: [ {
+   position: 140,
+   label: 'Payment Method'
+  }]
+  @EndUserText.label:'Payment Method'
+  PaymentMethod;
+
+
+  @UI.identification: [ {
+     position: 150,
+     label: 'Final Recipient'
+   }]
+    @EndUserText.label:'Final Recipient'
+  FinalRecipient;
+
+
+
+  //  @UI.identification: [ {
+  //  position: 90
+  //  } ]
+  @UI.fieldGroup: [{
+     position: 10,
+     qualifier: 'bank'
+   }]
+  BankName;
+  @UI.fieldGroup: [{
+       position: 20,
+       qualifier: 'bank'
+     }]
+  HouseBank;
+  @UI.fieldGroup: [{
+         position: 30,
+         qualifier: 'bank'
+       }]
+  Swift;
+  @UI.fieldGroup: [{
+         position: 40,
+         qualifier: 'bank'
+       }]
+  Iban;
+  @UI.fieldGroup: [{
+         position: 50,
+         qualifier: 'bank'
+       }]
+  BankKey;
+  @UI.fieldGroup: [{
+        position: 55,
+        label: 'BankKey_SK',
+        qualifier: 'bank'
+      }]
+      
+  BankKey_SK;
+  @UI.fieldGroup: [{
+        position: 60,
+        qualifier: 'bank'
+      }]      
+      
+
+  AccountId;
+  @UI.fieldGroup: [{
+         position: 70,
+         qualifier: 'bank',
+         label: 'Bank Account'
+       }]
+  @EndUserText.label:'Bank Account'
+  BankAccount;
+  
+  @UI.identification: [ {
+  position: 160,
+  label: 'Invoice Number'
+  } ]
+  @UI.lineItem: [ {
+    position: 160,
+      label: 'Invoice Number'
+  } ]
+@EndUserText.label:'Invoice Number'
+  InvoiceNumber;
+  @UI.identification: [ {
+  position: 170,
+  label: 'Constant Symbol'
+  } ]
+  //  @UI.hidden: true
+@EndUserText.label:'Constant Symbol'
+  ConstantSymbol;
+
+  @UI.identification: [ {
+  position: 171,
+  label: 'Invoice Instructions'
+  } ]
+  @UI.multiLineText: true
+  @EndUserText.label:'Invoice Instructions'
+  InvoiceInstructions;
+
+
+
+
+  @UI.fieldGroup: [{
+       position: 20,
+       qualifier: 'issuer',
+       label: 'Email'
+     }]
+       @EndUserText.label:'Email'
+  IssuerEmail;
+
+
+  @UI.fieldGroup: [{
+     position: 10,
+     qualifier: 'issuer',
+     label: 'Name'
+   }]
+      @EndUserText.label:'Name'
+  IssuerName;
+
+
+  @UI.identification: [ {
+  position: 10,
+  label: 'Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 10,
+    label: 'Status'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+    @EndUserText.label:'Status'
+  Status;
+  
+    @UI.identification: [ {
+  position: 11,
+  label: 'Document Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 11,
+    label: 'Document Status'
+  } ]
+  @UI.selectionField: [ { 
+    position: 11
+  } ]
+  @Consumption.filter: { defaultValue: 'N' }
+   @EndUserText.label:'Document Status'
+
+    DocumentStatus;
+  //  LastChangedBy;
+  //  LastChangedAt;
+  //  LocalLastChangedAt;
+
+}

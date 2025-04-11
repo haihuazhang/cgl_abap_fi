@@ -1,0 +1,34 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Loan Contracts Report",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD"
+  },
+  "ui5AppDetails": {
+    "appId": "zzfir003"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_4046E21FC8742A1D73E3D63FD163B849B4DB3CC6_TM",
+    "semanticObject": "zzfir003",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_4046E21FC8742A1D73E3D63FD163B849B4DB3CC6_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Loan Contracts Report",
+        "subtitle": "By Date"
+      }
+    }
+  ]
+}

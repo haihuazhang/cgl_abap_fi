@@ -1,0 +1,43 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Maintain Account Scope Configuration",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "serviceConfiguration": {
+    "serviceBinding": "ZUI_ACCOUNTSCOPECONFIGU_O4",
+    "serviceName": "ZUI_ACCOUNTSCOPECONFIGU_O4",
+    "serviceVersion": "0001",
+    "rootEntitySet": "AccountScopeConfAll",
+    "name": "Account Scope Configuration",
+    "configurationGroup": "",
+    "skipRootEntity": true
+  },
+  "appConfiguration": {
+    "listReport": {
+      "initialLoad": "auto",
+      "variantManagement": "none"
+    },
+    "objectPages": [
+      {
+        "entitySet": "AccountScopeConfAll",
+        "variantManagement": "control",
+        "showTransportSelectionStrip": true
+      }
+    ],
+    "tableSettings": [
+      {
+        "entitySet": "AccountScopeConfigu",
+        "tableType": "gridTable",
+        "selectionMode": "single",
+        "selectAll": true,
+        "rowCountMode": "auto",
+        "frozenColumnCount": 5,
+        "creationModeName": "inlineCreationRows",
+        "createAtEnd": true,
+        "widthIncludingColumnHeader": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+managed implementation in class ZBP_R_TFI004 unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_TFI004 alias ZrTfi004
+persistent table ZTFI004
+draft table ZTFI004_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+  field ( readonly )
+   Uuid,
+   CreatedBy,
+   CreatedAt,
+   LastChangedBy,
+   LastChangedAt,
+   LocalLastChangedAt;
+
+  field ( numbering : managed )
+   Uuid;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+//  draft determine action Prepare
+//  {
+//    validation DuplicateCheck;
+//  }
+
+  validation DuplicateCheck on save { create; update; }
+
+  mapping for ZTFI004
+  {
+    Uuid = uuid;
+    Type = type;
+    BoLen = bo_len;
+    CashFlow = cash_flow;
+    CashFlowCode = cash_flow_code;
+    Currency = currency;
+    Debit = debit;
+    Credit = credit;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+    LocalLastChangedAt = local_last_changed_at;
+  }
+}

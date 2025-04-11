@@ -1,0 +1,5 @@
+@EndUserText.label: 'Exchange Rate'
+define service ZAPI_SFI003 {
+  expose ZR_SFI059                    as I_ExchangeRateRawData;
+  expose I_ExchangeRateFactorsRawData;
+}

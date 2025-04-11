@@ -1,0 +1,6 @@
+@EndUserText.label: 'GLACCOUNT'
+define service ZAPI_SFI004 {
+  expose I_GLAccountInChartOfAccounts;
+  expose ZR_SFI060                    as I_GLAccountInCompanyCode;
+  expose I_GLAccountText;
+}
